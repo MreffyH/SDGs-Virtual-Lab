@@ -1,4 +1,4 @@
-# SDG-s-Virtual-Lab
+# SDGs-Virtual-Lab
 TUBES II3140 Pengembangan Aplikasi Web dan Mobile
 
 Nama  : Muhammad Reffy Haykal  
