@@ -4,7 +4,6 @@
 
 body {
     font-family: "Quicksand", sans-serif;
-  
     margin: 0;
     padding: 0;
 }
@@ -17,7 +16,6 @@ footer {
     padding: 20px;
     color: white;
     background-color: #5ba9e5;
-
     text-align: center;
     font-weight: bold;
 }
@@ -27,7 +25,6 @@ nav a {
     font-weight: 400;
     text-decoration: none;
     color: whitesmoke;
-  
 }
 
 nav a:hover {
@@ -49,7 +46,7 @@ nav a:hover {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 20px;
 }
@@ -65,42 +62,76 @@ nav a:hover {
 nav ul {
     padding-inline: 4rem;
     display: flex;
-    
     gap: 2rem;
 }
 
 nav li {
     list-style-type: none;
     margin-right: 5px;
-  
+    position: relative; /* Memungkinkan dropdown muncul di atas li */
 }
 
 nav {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     background-color: #5ba9e5;
     padding: 10px;
     position: sticky;
     top: 0;
 }
 
+nav li a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav li a:hover {
+    font-weight: bold;
+}
+
+/* Menu Profile dan Dropdown */
+nav li.profile:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat hover pada item Profile */
+}
+
+nav li .dropdown {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+nav li .dropdown li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    background-color: #fff;
+}
+
+nav li .dropdown li a:hover {
+    background-color: #f4f4f4;
+}
 
 main {
     padding: 20px;
-
     display: flex;
     gap: 1.5rem;
 }
 
 #content {
     flex: 5;
-
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem 2rem;
 }
-
 
 aside {
     flex: 1;
