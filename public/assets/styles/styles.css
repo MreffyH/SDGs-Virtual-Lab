@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: #0072BC;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1baef2;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+.choice header {
+    text-align: center;
+}
+
+.featured-image {
+    width: 60%;
+    max-height: 400px;
+    object-position: center;
+}
+
+.choice img {
+    width: 200px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #0A97D9;
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 5px;
+    position: relative; /* Memungkinkan dropdown muncul di atas li */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1baef2;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+nav li a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav li a:hover {
+    font-weight: bold;
+}
+
+/* Menu Profile dan Dropdown */
+nav li.profile:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat hover pada item Profile */
+}
+
+nav li .dropdown {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+nav li .dropdown li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    background-color: #fff;
+}
+
+nav li .dropdown li a:hover {
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+header {
+    display: inline;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1baef2;
+    text-align: center;
+}
+
+/* Bagian Game */
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Bagian Drag n Drop */
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.names {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    justify-items: center; 
+    align-items: center;
+    max-width: 600px; 
+    margin: auto; 
+}
+
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+}
+
+.dropbox, .origin-drop {
+    width: 75px;
+    height: 75px;
+    border: 2px dashed #000;
+    margin-top: 10px;
+}
+
+.name-origin-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-box {
+    width: 75px;
+    height: 75px; 
+    background-color: transparent; 
+    border: none; 
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.name-box img {
+    width: 100%; 
+    height: auto;
+}
+
+/* Bagian Kuis */
+.quiz-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.option-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.option.correct {
+    background-color: green;
+    color: #fff;
+}
+
+.option.incorrect {
+    background-color: red;
+    color: #fff;
+}
+
+#next-question {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-question:enabled {
+    background-color: #00A9FF;
+    color: #fff;
+}
+
+#next-question:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+    main aside {
+      align-self: center;
+    }
+    .images {
+      grid-template-columns: repeat(2, 1fr); /* Kurangi jumlah kolom menjadi 2 */
+    }
+    .names {
+        grid-template-columns: repeat(2, 1fr); /* Kurangi jumlah kolom menjadi 2 */
+        gap: 15px; /* Kurangi gap agar lebih kompak */
+    }
+    img {
+        width: 120px; /* Sesuaikan ukuran gambar */
+        height: 120px;
+    }
+    .dropbox, .origin-drop {
+        width: 60px; /* Kurangi ukuran dropbox */
+        height: 60px;
+    }
+    .name-box {
+        width: 60px; /* Sesuaikan ukuran nama-box */
+        height: 60px;
+    }
+}
+   
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+    justify-content: center;
+    }
+    main aside {
+      align-self: stretch;
+    }
+    .images {
+      grid-template-columns: repeat(1, 1fr); /* Kurangi jumlah kolom menjadi 1 */
+    }
+    .names {
+        grid-template-columns: repeat(1, 1fr); /* Kolom 1 untuk nama */
+    }
+    img {
+        width: 100px; /* Sesuaikan lebih kecil */
+        height: 100px;
+    }
+    .dropbox, .origin-drop {
+        width: 50px;
+        height: 50px;
+    }
+    .name-box {
+        width: 50px;
+        height: 50px;
+  }
+}
+
+/* Menggunakan Forced Colors Mode */
+@media (forced-colors: active) {
+    .element {
+      forced-color-adjust: none;
+    }
+  }
