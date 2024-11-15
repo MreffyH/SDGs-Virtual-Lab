@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <script type="module" src="auth/session.js" defer></script>
+        <script type="module" src="data/main.js" defer></script>
     </head>
     
     <body>
@@ -32,9 +34,9 @@
                     <li class="profile">
                         <a href="#">Profile</a>
                         <ul class="dropdown">
-                            <li><a href="/login.html">Login</a></li>
-                            <li><a href="/register.html">Register</a></li>
-                            <li><a href="/logout.html">Logout</a></li>
+                            <li class="login-register"><a href="/auth/register.html">Register</a></li>
+                            <li class="login-register"><a href="/auth/login.html">Login</a></li>
+                            <li class="logout"><a href="/auth/logout.html">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -102,8 +104,12 @@
                         
                         <li><strong>Partnerships for the Goals (Kemitraan untuk Mencapai Tujuan)</strong> - Mendorong kemitraan global yang kuat dan inklusif untuk mendukung pencapaian semua tujuan SDGs, melalui kerjasama internasional, peningkatan kapasitas, serta mobilisasi sumber daya.</li>
                     </ol>
-                    
                 </article>
+
+                <div id="video" class="card">
+                    <h2>Yuk kita lihat bersama</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/M-iJM02m_Hg?si=YaYndNIAQLsyzne-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 
                 <div id="game" class="card">
                     <h2>SDG's Games</h2>
@@ -355,6 +361,7 @@
                                 <td><input type="text" id="sdg-wish" placeholder="Tulis harapanmu di sini..."></td>
                             </tr>
                         </table>
+                        <button id="save-fav-btn">Simpan SDG Favorit</button>
                     </section>
                 </article>
             </aside>

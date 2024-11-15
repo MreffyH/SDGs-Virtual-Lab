@@ -9,7 +9,7 @@ body {
 }
 
 h2, h3 {
-    color: lightskyblue;
+    color: #0072BC;
 }
 
 footer {
@@ -54,7 +54,7 @@ nav a:hover {
 .jumbotron {
     font-size: 20px;
     padding: 60px;
-    background-color: #5bb5e5;
+    background-color: #0A97D9;
     text-align: center;
     color: white;
 }
@@ -75,7 +75,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5ba9e5;
+    background-color: #1baef2;
     padding: 10px;
     position: sticky;
     top: 0;
@@ -333,3 +333,10 @@ img {
         height: 50px;
   }
 }
+
+/* Menggunakan Forced Colors Mode */
+@media (forced-colors: active) {
+    .element {
+      forced-color-adjust: none;
+    }
+  }

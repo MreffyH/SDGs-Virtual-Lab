@@ -239,3 +239,18 @@ sdgWishInput.addEventListener("input", function () {
         sdgWishDisplay.style.display = "none"; 
     }
 });
+
+// Fungsi untuk mengatur tampilan menu berdasarkan status login
+function updateMenuBasedOnAuthStatus(user) {
+    if (user) {
+        // User is logged in, tampilkan opsi Logout, sembunyikan Register dan Login
+        registerLink.style.display = "none";
+        loginLink.style.display = "none";
+        logoutLink.style.display = "block";
+    } else {
+        // User is not logged in, tampilkan opsi Register dan Login, sembunyikan Logout
+        registerLink.style.display = "block";
+        loginLink.style.display = "block";
+        logoutLink.style.display = "none";
+    }
+}
